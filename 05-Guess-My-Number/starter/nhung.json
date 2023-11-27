@@ -1,0 +1,14 @@
+{
+	"Print to console": {
+		"scope": "javascript,typescript",
+		"prefix": "nn",
+		"body": ["console.log('$1');"],
+		"description": "Log output to console"
+	},
+	"DOM selector": {
+		"scope": "javascript,typescript",
+		"prefix": "dq",
+		"body": ["document.querySelector('$1');"],
+		"description": "DOM selector"
+	}
+}

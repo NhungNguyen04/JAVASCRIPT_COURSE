@@ -1,0 +1,11 @@
+const country = 'Viet Nam';
+// const continent = 'Asia';
+// let population = '13';
+// const isIsland = false;
+// let language;
+// console.log(typeof country, typeof continent, typeof population, typeof isIsland, typeof language);
+// language = 'Vietnamese';
+// console.log(population+1);
+// let description;
+// description = country + "is in " + continent + ", and its" + population + " people speak " + language;
+// console.log(description);
