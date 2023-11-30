@@ -1,4 +1,4 @@
-i@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 * {
   margin: 0;
@@ -34,6 +34,10 @@ main {
   border-radius: 9px;
   overflow: hidden;
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .player {
