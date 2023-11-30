@@ -26,7 +26,7 @@ function startGame() {
     activePlayer = 0;
     const scores = [0, 0];
     playing = true;
-    
+
     dice.classList.add('hidden');
     player0.classList.remove('player--winner');
     player1.classList.remove('player--winner');
@@ -70,7 +70,7 @@ btnHold.addEventListener('click', function(){
     scores[activePlayer] += currentScore;
     document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
 // 2. Check if player's score is >= 100
-    if (scores[activePlayer] >= 10) {
+    if (scores[activePlayer] >= 100) {
     // Finish the game
         document
             .querySelector(`.player--${activePlayer}`)
@@ -80,8 +80,10 @@ btnHold.addEventListener('click', function(){
             .classList.remove('player--active');
         playing = false;
     }
+    else {
     // Switch to the next player
-    switchPlayer();
+        switchPlayer();
+    }
 });
 
 // Restarting the game
