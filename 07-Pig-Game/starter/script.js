@@ -1,6 +1,8 @@
 'use strict';
 
 // Selecting elements
+const player0 = document.querySelector(".player--0");
+const player1 = document.querySelector(".player--1");
 const current0 = document.getElementById('current--0');
 const current1 = document.getElementById('current--1');
 const total0 = document.getElementById('score--0');
@@ -34,9 +36,9 @@ btnRoll.addEventListener('click', function(){
     }
     else {
         document.getElementById(`current--${activePlayer}`).textContent = 0;
-        document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
         activePlayer = activePlayer === 0?1:0;
-        document.querySelector(`.player--${activePlayer}`).classList.add('player--active');
         currentScore = 0;
+        player0.classList.toggle("player--active");
+        player1.classList.toggle("player--active");
     }
 });
