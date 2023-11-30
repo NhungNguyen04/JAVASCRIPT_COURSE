@@ -26,6 +26,7 @@ function startGame() {
     activePlayer = 0;
     const scores = [0, 0];
     playing = true;
+    
     dice.classList.add('hidden');
     player0.classList.remove('player--winner');
     player1.classList.remove('player--winner');
