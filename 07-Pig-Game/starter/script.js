@@ -22,11 +22,15 @@ function startGame() {
     current1.textContent = 0;
     total0.textContent = 0;
     total1.textContent = 0;
-    dice.classList.add('hidden');
     currentScore = 0;
     activePlayer = 0;
     const scores = [0, 0];
     playing = true;
+    dice.classList.add('hidden');
+    player0.classList.remove('player--winner');
+    player1.classList.remove('player--winner');
+    player0.classList.add('player--active');
+    player1.classList.remove('player--active');
 }
 
 startGame();
@@ -77,4 +81,9 @@ btnHold.addEventListener('click', function(){
     }
     // Switch to the next player
     switchPlayer();
+});
+
+// Restarting the game
+btnNew.addEventListener('click', function() {
+    startGame();
 });
