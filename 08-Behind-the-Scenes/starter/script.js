@@ -127,15 +127,41 @@
 // Nhung.calcAge();
 
 // arguments keyword
-const addExpr = function (a, b) {
-    console.log(arguments);
-    return a+b;
-};
-addExpr(3, 8, 7, 8, 9);
+// const addExpr = function (a, b) {
+//     console.log(arguments);
+//     return a+b;
+// };
+// addExpr(3, 8, 7, 8, 9);
 
-var addArrow = (a, b) => {
-    console.log(arguments);
-    return a+b;
+// var addArrow = (a, b) => {
+//     console.log(arguments);
+//     return a+b;
+// };
+
+// addArrow(1, 2);
+
+// --------------------------- PRIMITIVES VS REFRERENCES -------------------------
+
+const will = {
+    firstName: 'Will',
+    lastName: 'Graham',
+    age: 37,
+    family: ['dog1', 'dog2'],
 };
 
-addArrow(1, 2);
+// const marriedWill = will;
+// marriedWill.lastName = 'Lecter';
+// console.log(`Before marriage: ${will.lastName}`);
+// console.log(`After marriage: ${marriedWill.lastName}`);
+
+// Copy objects
+
+const marriedWill = Object.assign({}, will);
+marriedWill.lastName = 'Lecter';
+console.log(`Before marriage: ${will.lastName}`);
+console.log(`After marriage: ${marriedWill.lastName}`);
+
+marriedWill.family.push('Hannibal Lecter');
+console.log(`Before marriage: ${will.family}`);
+console.log(`After marriage: ${marriedWill.family}`);
+
