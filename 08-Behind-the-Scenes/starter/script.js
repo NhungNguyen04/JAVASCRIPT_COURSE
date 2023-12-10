@@ -59,6 +59,36 @@
 //     console.log ('All products deleted!');
 // }
 
-var x = 1;
-let y = 2;
-const z = 3;
+// var x = 1;
+// let y = 2;
+// const z = 3;
+
+// -------- THIS KEYWORD ---------
+
+// console.log(this);
+
+// const calcAgeArr = (birthYear) => {
+//     console.log(2024-birthYear);
+//     console.log(this);
+// };
+// calcAgeArr(2004);
+
+const Nhung = {
+    name: 'Nhung',
+    year: 2004,
+    calcAge : function () {
+        console.log(this.year);
+    }
+};
+
+const Pi = {
+    year: 2022
+};
+
+Nhung.calcAge();
+Pi.calcAge = Nhung.calcAge;
+
+Pi.calcAge();
+
+const f = Nhung.calcAge;
+f();
