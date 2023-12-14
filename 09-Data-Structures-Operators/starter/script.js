@@ -32,6 +32,9 @@ const restaurant = {
   orderDelivery: function ({starterIndex = 1, mainIndex = 1, time = "6:00", address}) {
     console.log(`Order received: ${this.starterMenu[starterIndex]}, ${this.mainMenu[mainIndex]} at ${time} to ${address}`);
   },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here's your pasta made with ${ing1}, ${ing2} and ${ing3}`);
+  }
 };
 
 // // DESTRUCTURING ARRAYS
@@ -82,5 +85,46 @@ const restaurant = {
 // } = openingHours;
 // console.log(o, c);
 
-// passing objects to a function
-restaurant.orderDelivery({mainIndex: 2, time: "7:00", address: "123, Ngo Quyen"});
+// // passing objects to a function
+// restaurant.orderDelivery({mainIndex: 2, time: "7:00", address: "123, Ngo Quyen"});
+
+// // THE SPREAD OPERATOR (...)
+// const arr = [6, 7, 8, 9];
+// const badNewArr = [1, 2, arr[0], arr[1], arr[2], arr[3]];
+// console.log(badNewArr);
+
+// const goodNewArr = [1, 2, ...arr];
+// console.log(goodNewArr);
+// console.log(...goodNewArr);
+
+// const newMenu = [...restaurant.mainMenu, 'Pho'];
+// console.log(newMenu);
+
+// // Copy array
+// const newMainMenu = [...restaurant.mainMenu];
+// // Join 2 arrays
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log(menu);
+// // Iterables: arrays, sets, strings, maps, NOT objects
+// const str = 'Nhung'
+// const letters = [...str, ' ', 'N.'];
+// console.log(letters);
+// console.log(...str)
+// // console.log(`${...str} Nguyen`);
+
+// // Real world example
+// const ingredients = [
+//   prompt("Let's make pasta! Ingredient 1: "),
+//   prompt("Ingredient 2: "),
+//   prompt("Ingredient 3: "),
+// ];
+// console.log( ingredients);
+// restaurant.orderPasta(...ingredients);
+
+// Objects
+const newRestaurant = {foundedIn: 1981, ...restaurant, owner: "Nhung"};
+console.log(newRestaurant);
+const restaurantCopy = {...restaurant};
+restaurantCopy.name = 'Homie';
+console.log(restaurantCopy);
+console.log(restaurant);
